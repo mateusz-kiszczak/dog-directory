@@ -1,0 +1,27 @@
+//Not Found
+
+.not-found__dog-img {
+  border-radius: 10px;
+  -webkit-box-shadow: 0 2px 3px rgb(0, 0, 0);
+          box-shadow: 0 2px 3px rgb(0, 0, 0);
+  display: block;
+  margin: 64px auto;
+  height: auto;
+  width: 90vw;
+
+  @media only screen and (min-width: 600px) {
+    width :43vw;
+
+    @media only screen and (min-width: 800px) {
+      width: 40.5vw;
+
+      @media only screen and (min-width: 1100px) {
+        width: 31.5vw;
+        
+        @media only screen and (min-width: 1600px) {
+          width: 15.75vw;
+        }
+      }
+    }
+  }
+}

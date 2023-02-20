@@ -1,0 +1,87 @@
+// Mixins
+@import '../utilities/mixins';
+
+@mixin widthEqualHeightOnVaryScreens {
+  @media only screen and (min-width: 600px) {
+    @include widthEqualHeight(43vw);
+
+    @media only screen and (min-width: 800px) {
+      @include widthEqualHeight(40.5vw);
+
+      @media only screen and (min-width: 1100px) {
+        @include widthEqualHeight(31.5vw);
+        
+        @media only screen and (min-width: 1600px) {
+          @include widthEqualHeight(15.75vw);
+        }
+      }
+    }
+  }
+}
+
+// Dogs Images
+
+.dogs__imgs-container {
+  @include gridSquareItems(90vw, 1);
+  display: -ms-grid;
+  display: grid;
+    -webkit-box-align: center;
+      -ms-flex-align: center;
+        align-items: center;
+    gap: 5vw 5vw;
+    justify-items: center;
+  margin: 0 auto;
+  position: relative;
+  width: 94vw;
+  
+  @media only screen and (min-width: 600px) {
+    @include gridSquareItems(43vw, 2);
+    gap: 3vw 3vw;
+    width: 89vw;
+
+    @media only screen and (min-width: 800px) {
+      @include gridSquareItems(40.5vw, 2);
+      width: 84vw;
+
+      @media only screen and (min-width: 1100px) {
+        @include gridSquareItems(31.5vw, 2);
+        width: 66vw;
+        
+        @media only screen and (min-width: 1600px) {
+          @include gridSquareItems(15.75vw, 4);
+          gap: 1vw 1vw;
+          width: 66vw;
+        }
+      }
+    }
+  }
+  
+  .dogs__loading-bg {
+    @include widthEqualHeightOnVaryScreens;
+    @include widthEqualHeight(90vw);
+    background-color: rgb(240, 251, 255);
+    border-radius: 10px;
+    display: -ms-grid;
+    display: grid;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    justify-items: center;
+    -ms-grid-columns: 1fr;
+    grid-template-columns: 1fr;
+    -ms-grid-rows: 1fr;
+    grid-template-rows: 1fr;
+    position: absolute;
+    z-index: 99;
+  }
+  
+  .dogs__dog-img {
+    @include widthEqualHeightOnVaryScreens;
+    @include widthEqualHeight(90vw);
+    -o-object-fit: cover;
+     object-fit: cover;
+    -webkit-box-shadow: 0 2px 3px rgb(0, 0, 0);
+            box-shadow: 0 2px 3px rgb(0, 0, 0);
+    border-radius: 10px;
+  }
+}

@@ -1,0 +1,19 @@
+@mixin gridSquareItems($size, $colNum) {
+  grid-template-columns: repeat($colNum, $size);
+  grid-auto-rows: $size;
+}
+
+@mixin widthEqualHeight ($val) {
+  height: $val;
+  width: $val;
+}
+
+@mixin defaultButton ($bgColor, $textColor) {
+  border-radius: 5px;
+  cursor: pointer;
+  padding: 4px;
+  text-transform: uppercase;
+  color: $textColor;
+  background-color: $bgColor;
+  border-color: $bgColor;
+}

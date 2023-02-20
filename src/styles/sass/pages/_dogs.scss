@@ -1,0 +1,27 @@
+/* Dogs */
+@import '../utilities/mixins';
+
+.dogs {
+  margin: {
+    bottom: 32px;
+    top: 32px;
+  }
+  
+  h2 {
+    // margin-bottom: 12px;
+    font-family: FredokaOne, Arial, Helvetica, sans-serif;
+    letter-spacing: 1px;
+  }
+
+  .dogs__back-to-home {
+    @include defaultButton(rgb(255, 255, 0), rgb(0, 0, 0));
+    width: auto;
+    border-color: rgb(0, 0, 0);
+    padding: 4px 8px;
+    margin: {
+      bottom: 12px;
+      top: 12px;
+    }
+  }
+}
+  

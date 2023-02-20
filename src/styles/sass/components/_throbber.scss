@@ -1,0 +1,82 @@
+/* Throbber */
+.throbber {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  height: 100px;
+  width: 100px;
+  margin: 0 auto;
+  position: relative;
+
+  .circle-of-dots {
+    -webkit-animation: spin-animation 4000ms linear infinite;
+            animation: spin-animation 4000ms linear infinite;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    height: 90%;
+    width: 90%;
+    position: absolute;
+
+    .dot-container {
+      height: 15%;
+      width: 50%;
+      position: absolute;
+      -webkit-transform-origin: right;
+          -ms-transform-origin: right;
+              transform-origin: right;
+
+      .dot {
+        -webkit-animation: opacity-animation 1000ms linear infinite;
+                animation: opacity-animation 1000ms linear infinite;
+        background-color: rgb(140, 186, 255);
+        border-radius: 50%;
+        height: 100%;
+        width: 30%;
+      }
+    }
+  }
+
+  @-webkit-keyframes spin-animation {
+    from {
+      -webkit-transform: rotate(0);
+              transform: rotate(0);
+    }
+    to {
+      -webkit-transform: rotate(359deg);
+              transform: rotate(359deg);
+    }
+  }
+
+  @keyframes spin-animation {
+    from {
+      -webkit-transform: rotate(0);
+              transform: rotate(0);
+    }
+    to {
+      -webkit-transform: rotate(359deg);
+              transform: rotate(359deg);
+    }
+  }
+
+  @-webkit-keyframes opacity-animation {
+    from { opacity: 1; }
+    50% { opacity: 0; }
+    to { opacity: 1; }
+  }
+
+  @keyframes opacity-animation {
+    from { opacity: 1; }
+    50% { opacity: 0; }
+    to { opacity: 1; }
+  }
+}

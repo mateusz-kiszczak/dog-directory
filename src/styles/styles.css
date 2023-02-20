@@ -1,0 +1,502 @@
+/* Reset */
+* {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* Typography */
+* {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+@font-face {
+  font-family: LeckerliOne;
+  src: url(../fonts/LeckerliOne-Regular.ttf);
+}
+@font-face {
+  font-family: FredokaOne;
+  src: url(../fonts/FredokaOne-Regular.ttf);
+}
+h1,
+h2,
+h3 {
+  text-transform: uppercase;
+}
+
+@media only screen and (min-width: 700px) {
+  * {
+    font-size: 18px;
+  }
+
+  h1 {
+    font-size: 3rem;
+  }
+
+  h2 {
+    font-size: 2.5rem;
+  }
+
+  h3 {
+    font-size: 2rem;
+  }
+}
+/* Layout */
+html,
+body,
+#root {
+  height: 100%;
+  width: 100%;
+}
+
+.app__container {
+  background-color: rgb(240, 251, 255);
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 100%;
+  grid-template-columns: 100%;
+  -ms-grid-rows: auto 1fr auto;
+  grid-template-rows: auto 1fr auto;
+  min-height: 100%;
+}
+
+.element-padding-hor {
+  padding: 0 5vw;
+}
+@media only screen and (min-width: 600px) {
+  .element-padding-hor {
+    padding: 0 5.5vw;
+  }
+}
+@media only screen and (min-width: 600px) and (min-width: 800px) {
+  .element-padding-hor {
+    padding: 0 8vw;
+  }
+}
+@media only screen and (min-width: 600px) and (min-width: 800px) and (min-width: 1100px) {
+  .element-padding-hor {
+    padding: 0 17vw;
+  }
+}
+
+/* Header */
+.app__header {
+  background-color: rgb(0, 0, 0);
+  -webkit-box-shadow: 0 1px 3px rgb(0, 0, 0);
+  box-shadow: 0 1px 3px rgb(0, 0, 0);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  height: 80px;
+  width: 100%;
+}
+.app__header h1 {
+  color: rgb(231, 249, 255);
+  font-family: FredokaOne, Arial, Helvetica, sans-serif;
+  letter-spacing: 2px;
+}
+@media only screen and (min-width: 700px) {
+  .app__header {
+    height: 100px;
+  }
+}
+
+/* Footer */
+.app__footer {
+  background-color: rgb(0, 0, 0);
+  -webkit-box-shadow: 0 -1px 3px rgb(0, 0, 0);
+  box-shadow: 0 -1px 3px rgb(0, 0, 0);
+  color: rgb(231, 249, 255);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  height: 60px;
+  text-align: center;
+}
+.app__footer p {
+  width: 100%;
+  text-align: center;
+}
+.app__footer a {
+  color: rgb(255, 255, 0);
+}
+
+.dogs__imgs-container {
+  grid-template-columns: repeat(1, 90vw);
+  grid-auto-rows: 90vw;
+  display: -ms-grid;
+  display: grid;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  gap: 5vw 5vw;
+  justify-items: center;
+  margin: 0 auto;
+  position: relative;
+  width: 94vw;
+}
+@media only screen and (min-width: 600px) {
+  .dogs__imgs-container {
+    grid-template-columns: repeat(2, 43vw);
+    grid-auto-rows: 43vw;
+    gap: 3vw 3vw;
+    width: 89vw;
+  }
+}
+@media only screen and (min-width: 600px) and (min-width: 800px) {
+  .dogs__imgs-container {
+    grid-template-columns: repeat(2, 40.5vw);
+    grid-auto-rows: 40.5vw;
+    width: 84vw;
+  }
+}
+@media only screen and (min-width: 600px) and (min-width: 800px) and (min-width: 1100px) {
+  .dogs__imgs-container {
+    grid-template-columns: repeat(2, 31.5vw);
+    grid-auto-rows: 31.5vw;
+    width: 66vw;
+  }
+}
+@media only screen and (min-width: 600px) and (min-width: 800px) and (min-width: 1100px) and (min-width: 1600px) {
+  .dogs__imgs-container {
+    grid-template-columns: repeat(4, 15.75vw);
+    grid-auto-rows: 15.75vw;
+    gap: 1vw 1vw;
+    width: 66vw;
+  }
+}
+.dogs__imgs-container .dogs__loading-bg {
+  height: 90vw;
+  width: 90vw;
+  background-color: rgb(240, 251, 255);
+  border-radius: 10px;
+  display: -ms-grid;
+  display: grid;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  justify-items: center;
+  -ms-grid-columns: 1fr;
+  grid-template-columns: 1fr;
+  -ms-grid-rows: 1fr;
+  grid-template-rows: 1fr;
+  position: absolute;
+  z-index: 99;
+}
+@media only screen and (min-width: 600px) {
+  .dogs__imgs-container .dogs__loading-bg {
+    height: 43vw;
+    width: 43vw;
+  }
+}
+@media only screen and (min-width: 600px) and (min-width: 800px) {
+  .dogs__imgs-container .dogs__loading-bg {
+    height: 40.5vw;
+    width: 40.5vw;
+  }
+}
+@media only screen and (min-width: 600px) and (min-width: 800px) and (min-width: 1100px) {
+  .dogs__imgs-container .dogs__loading-bg {
+    height: 31.5vw;
+    width: 31.5vw;
+  }
+}
+@media only screen and (min-width: 600px) and (min-width: 800px) and (min-width: 1100px) and (min-width: 1600px) {
+  .dogs__imgs-container .dogs__loading-bg {
+    height: 15.75vw;
+    width: 15.75vw;
+  }
+}
+.dogs__imgs-container .dogs__dog-img {
+  height: 90vw;
+  width: 90vw;
+  -o-object-fit: cover;
+  object-fit: cover;
+  -webkit-box-shadow: 0 2px 3px rgb(0, 0, 0);
+  box-shadow: 0 2px 3px rgb(0, 0, 0);
+  border-radius: 10px;
+}
+@media only screen and (min-width: 600px) {
+  .dogs__imgs-container .dogs__dog-img {
+    height: 43vw;
+    width: 43vw;
+  }
+}
+@media only screen and (min-width: 600px) and (min-width: 800px) {
+  .dogs__imgs-container .dogs__dog-img {
+    height: 40.5vw;
+    width: 40.5vw;
+  }
+}
+@media only screen and (min-width: 600px) and (min-width: 800px) and (min-width: 1100px) {
+  .dogs__imgs-container .dogs__dog-img {
+    height: 31.5vw;
+    width: 31.5vw;
+  }
+}
+@media only screen and (min-width: 600px) and (min-width: 800px) and (min-width: 1100px) and (min-width: 1600px) {
+  .dogs__imgs-container .dogs__dog-img {
+    height: 15.75vw;
+    width: 15.75vw;
+  }
+}
+
+/* Throbber */
+.throbber {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  height: 100px;
+  width: 100px;
+  margin: 0 auto;
+  position: relative;
+}
+.throbber .circle-of-dots {
+  -webkit-animation: spin-animation 4000ms linear infinite;
+  animation: spin-animation 4000ms linear infinite;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  height: 90%;
+  width: 90%;
+  position: absolute;
+}
+.throbber .circle-of-dots .dot-container {
+  height: 15%;
+  width: 50%;
+  position: absolute;
+  -webkit-transform-origin: right;
+  -ms-transform-origin: right;
+  transform-origin: right;
+}
+.throbber .circle-of-dots .dot-container .dot {
+  -webkit-animation: opacity-animation 1000ms linear infinite;
+  animation: opacity-animation 1000ms linear infinite;
+  background-color: rgb(140, 186, 255);
+  border-radius: 50%;
+  height: 100%;
+  width: 30%;
+}
+@-webkit-keyframes spin-animation {
+  from {
+    -webkit-transform: rotate(0);
+    transform: rotate(0);
+  }
+  to {
+    -webkit-transform: rotate(359deg);
+    transform: rotate(359deg);
+  }
+}
+@keyframes spin-animation {
+  from {
+    -webkit-transform: rotate(0);
+    transform: rotate(0);
+  }
+  to {
+    -webkit-transform: rotate(359deg);
+    transform: rotate(359deg);
+  }
+}
+@-webkit-keyframes opacity-animation {
+  from {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@keyframes opacity-animation {
+  from {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+/* Home */
+.home__main-container {
+  background-image: url(../../public/img/black-cute-dog-small.jpg);
+  background-position: 50% 30%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  -webkit-box-shadow: 0 1px 3px rgb(0, 0, 0);
+  box-shadow: 0 1px 3px rgb(0, 0, 0);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  height: 50vh;
+  width: 100%;
+}
+@media only screen and (min-width: 800px) {
+  .home__main-container {
+    background-image: url(../../public/img/black-cute-dog-medium.jpg);
+  }
+}
+@media only screen and (min-width: 1000px) {
+  .home__main-container {
+    background-color: rgb(0, 0, 0);
+    background-position: 50%;
+    background-size: 70%;
+  }
+}
+@media only screen and (min-width: 1260px) {
+  .home__main-container {
+    background-image: url(../../public/img/black-cute-dog-medium.jpg);
+    background-size: 50%;
+  }
+}
+.home__main-container h2 {
+  color: rgb(231, 249, 255);
+  font-family: LeckerliOne, Arial, Helvetica, sans-serif;
+  margin-bottom: 12px;
+  text-shadow: 0 0 20px rgb(0, 0, 0);
+}
+.home__main-container .home__search-wrapper {
+  width: 80%;
+}
+.home__main-container .home__search-wrapper option {
+  cursor: pointer;
+}
+.home__main-container .home__search-wrapper select {
+  cursor: pointer;
+  padding: 4px;
+  width: 73%;
+}
+@media only screen and (min-width: 600px) {
+  .home__main-container .home__search-wrapper select {
+    font-size: 18px;
+  }
+}
+@media only screen and (min-width: 800px) {
+  .home__main-container .home__search-wrapper select {
+    padding: 6px;
+  }
+}
+.home__main-container .home__search-wrapper button {
+  border-radius: 5px;
+  cursor: pointer;
+  padding: 4px;
+  text-transform: uppercase;
+  color: rgb(255, 255, 255);
+  background-color: rgb(0, 128, 0);
+  border-color: rgb(0, 128, 0);
+  margin-left: 2%;
+  width: 25%;
+}
+.home__main-container .home__search-wrapper button[disabled] {
+  cursor: not-allowed;
+}
+@media only screen and (min-width: 600px) {
+  .home__main-container .home__search-wrapper button {
+    font-size: 18px;
+  }
+}
+@media only screen and (min-width: 800px) {
+  .home__main-container .home__search-wrapper button {
+    padding: 6px;
+  }
+}
+@media only screen and (min-width: 860px) {
+  .home__main-container .home__search-wrapper {
+    width: 613px;
+  }
+}
+
+.random-imgs {
+  margin-bottom: 64px;
+  margin-top: 64px;
+}
+.random-imgs h3 {
+  font-family: FredokaOne, Arial, Helvetica, sans-serif;
+  letter-spacing: 1px;
+  margin-bottom: 12px;
+}
+
+/* Dogs */
+.dogs {
+  margin-bottom: 32px;
+  margin-top: 32px;
+}
+.dogs h2 {
+  font-family: FredokaOne, Arial, Helvetica, sans-serif;
+  letter-spacing: 1px;
+}
+.dogs .dogs__back-to-home {
+  border-radius: 5px;
+  cursor: pointer;
+  padding: 4px;
+  text-transform: uppercase;
+  color: rgb(0, 0, 0);
+  background-color: rgb(255, 255, 0);
+  border-color: rgb(255, 255, 0);
+  width: auto;
+  border-color: rgb(0, 0, 0);
+  padding: 4px 8px;
+  margin-bottom: 12px;
+  margin-top: 12px;
+}
+
+.not-found__dog-img {
+  border-radius: 10px;
+  -webkit-box-shadow: 0 2px 3px rgb(0, 0, 0);
+  box-shadow: 0 2px 3px rgb(0, 0, 0);
+  display: block;
+  margin: 64px auto;
+  height: auto;
+  width: 90vw;
+}
+@media only screen and (min-width: 600px) {
+  .not-found__dog-img {
+    width: 43vw;
+  }
+}
+@media only screen and (min-width: 600px) and (min-width: 800px) {
+  .not-found__dog-img {
+    width: 40.5vw;
+  }
+}
+@media only screen and (min-width: 600px) and (min-width: 800px) and (min-width: 1100px) {
+  .not-found__dog-img {
+    width: 31.5vw;
+  }
+}
+@media only screen and (min-width: 600px) and (min-width: 800px) and (min-width: 1100px) and (min-width: 1600px) {
+  .not-found__dog-img {
+    width: 15.75vw;
+  }
+}
+
+/*# sourceMappingURL=styles.css.map */
